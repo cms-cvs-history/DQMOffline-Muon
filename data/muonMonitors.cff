@@ -1,0 +1,3 @@
+include "DQM/TrackerMonitorTrack/data/MonitorTrackSTACosmicMuons.cff"
+
+sequence muonMonitors = {MonitorTrackSTACosmicMuons}
