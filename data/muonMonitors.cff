@@ -1,3 +1,7 @@
+#Analyzer taken from online dqm
 include "DQM/TrackerMonitorTrack/data/MonitorTrackSTACosmicMuons.cff"
 
-sequence muonMonitors = {MonitorTrackSTACosmicMuons}
+#dedicated analyzers from offline dqm 
+include "DQMOffline/Muon/data/MuDepositEnergyMonitoring.cfi"
+
+sequence muonMonitors = {MonitorTrackSTACosmicMuons,muDepEnergyMonitoring}
