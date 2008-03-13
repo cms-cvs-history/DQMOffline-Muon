@@ -1,0 +1,36 @@
+# MuDepositEnergyMonitoring
+  module muDepEnergyMonitoring = MuDepositEnergyMonitoring
+  {
+    InputTag CosmicsCollectionLabel = muons
+    string AlgoName="ctf"
+    bool debug = true
+
+    int32 emSizeBin=500
+    double emSizeMin = 0.0
+    double emSizeMax = 500.0
+
+    int32 emS9SizeBin=500
+    double emS9SizeMin = 0.0
+    double emS9SizeMax = 500.0
+
+    int32 hadSizeBin=500
+    double hadSizeMin = 0.0
+    double hadSizeMax = 500.0
+
+    int32 hadS9SizeBin=500
+    double hadS9SizeMin = 0.0
+    double hadS9SizeMax = 500.0
+
+    int32 hoSizeBin=500
+    double hoSizeMin = 0.0
+    double hoSizeMax = 500.0
+
+    int32 hoS9SizeBin=500
+    double hoS9SizeMin = 0.0
+    double hoS9SizeMax = 500.0
+
+    bool OutputMEsInRootFile = true
+    string OutputFileName="MuDepositEnergyMonitoring.root"
+
+
+  }
