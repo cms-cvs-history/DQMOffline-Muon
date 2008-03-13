@@ -29,7 +29,7 @@
     double hoS9SizeMin = 0.0
     double hoS9SizeMax = 3.0
 
-    bool OutputMEsInRootFile = true
+    bool OutputMEsInRootFile = false
     string OutputFileName="MuDepositEnergyMonitoring.root"
 
 
