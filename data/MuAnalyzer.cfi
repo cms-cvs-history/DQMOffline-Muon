@@ -1,6 +1,8 @@
 # MuonAnalyzer
   module muonAnalyzer = MuonAnalyzer
   {
+    using MuonServiceProxy
+
     InputTag CosmicsCollectionLabel = muons
     
     PSet muonEnergyAnalysis = {   
@@ -36,7 +38,6 @@
 
     PSet seedsAnalysis = {
        bool debug = true
-       using MuonServiceProxy
 
        int32 RecHitBin=22
        double RecHitMin = 3
