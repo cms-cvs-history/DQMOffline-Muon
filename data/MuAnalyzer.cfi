@@ -48,13 +48,17 @@
        double thetaMin = 0.0
        double thetaMax = 3.2
 
-       int32 qOverpBin = 1000
-       double qOverpMin = -0.5
-       double qOverpMax = 0.5
+       int32 pBin = 500
+       double pMin = 0.0
+       double pMax = 500.0
 
-       int32 qOverptBin = 1000
-       double qOverptMin = -0.5
-       double qOverptMax = 0.5
+       int32 ptBin = 500
+       double ptMin = 0.0
+       double ptMax = 500.0       
+
+       int32 pResBin = 1000
+       double pResMin = -0.5
+       double pResMax = 0.5
 
     }
 
@@ -127,7 +131,7 @@
     }
 
     bool OutputMEsInRootFile = true
-    string OutputFileName="MuDepositEnergyMonitoring.root"
+    string OutputFileName="MuonMonitoring.root"
 
 
   }
