@@ -7,4 +7,4 @@ include "DQMOffline/Muon/data/muonAnalyzer.cff"
 replace MonitorTrackSTACosmicMuons.OutputMEsInRootFile = false
 replace muonAnalyzer.OutputMEsInRootFile = false
 
-sequence muonMonitors = {muonAnalyzer}
+sequence muonMonitors = {MonitorTrackSTACosmicMuons,muonAnalyzer}
