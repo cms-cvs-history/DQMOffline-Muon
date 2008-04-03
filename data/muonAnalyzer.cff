@@ -1,0 +1,3 @@
+include "RecoMuon/TrackingTools/data/MuonServiceProxy.cff"
+
+include "DQMOffline/Muon/data/muonAnalyzer.cfi"
