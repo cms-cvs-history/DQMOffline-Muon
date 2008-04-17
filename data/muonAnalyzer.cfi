@@ -1,137 +1,136 @@
 # MuonAnalyzer
-  module muonAnalyzer = MuonAnalyzer
-  {
+module muonAnalyzer = MuonAnalyzer
+{
     using MuonServiceProxy
-
+    
     InputTag CosmicsCollectionLabel = muons
     
     PSet muonEnergyAnalysis = {   
-       bool debug = true
-       string AlgoName="ctf"
+	bool debug = true
+       string AlgoName="muons"
+	
+	int32 emSizeBin=1000
+	double emSizeMin = 0.0
+	double emSizeMax = 10.0
+	
+	int32 emS9SizeBin=1000
+	double emS9SizeMin = 0.0
+	double emS9SizeMax = 10.0
+	
+	int32 hadSizeBin=1000
+	double hadSizeMin = 0.0
+	double hadSizeMax = 10.0
 
-       int32 emSizeBin=1000
-       double emSizeMin = 0.0
-       double emSizeMax = 10.0
-
-       int32 emS9SizeBin=1000
-       double emS9SizeMin = 0.0
-       double emS9SizeMax = 10.0
-
-       int32 hadSizeBin=1000
-       double hadSizeMin = 0.0
-       double hadSizeMax = 10.0
-
-       int32 hadS9SizeBin=1000
-       double hadS9SizeMin = 0.0
-       double hadS9SizeMax = 10.0
-
-       int32 hoSizeBin=1000
-       double hoSizeMin = 0.0
-       double hoSizeMax = 10.0
-
-       int32 hoS9SizeBin=1000
-       double hoS9SizeMin = 0.0
-       double hoS9SizeMax = 10.0
+	int32 hadS9SizeBin=1000
+	double hadS9SizeMin = 0.0
+	double hadS9SizeMax = 10.0
+	
+	int32 hoSizeBin=1000
+	double hoSizeMin = 0.0
+	double hoSizeMax = 10.0
+	
+	int32 hoS9SizeBin=1000
+	double hoS9SizeMin = 0.0
+	double hoS9SizeMax = 10.0
     }
-
+    
     PSet muonRecoAnalysis = {  
+	
+	int32 phiBin = 100
+	double phiMin = -3.2
+	double phiMax = 3.2
+	
+	int32 etaBin = 100
+	double etaMin = -3.0
+	double etaMax = 3.0
 
-       int32 phiBin = 100
-       double phiMin = -3.2
-       double phiMax = 3.2
+	int32 thetaBin = 100
+	double thetaMin = 0.0
+	double thetaMax = 3.2
+	
+	int32 pBin = 500
+	double pMin = 0.0
+	double pMax = 500.0
 
-       int32 etaBin = 100
-       double etaMin = -3.0
-       double etaMax = 3.0
-
-       int32 thetaBin = 100
-       double thetaMin = 0.0
-       double thetaMax = 3.2
-
-       int32 pBin = 500
-       double pMin = 0.0
-       double pMax = 500.0
-
-       int32 ptBin = 500
-       double ptMin = 0.0
-       double ptMax = 500.0       
-
-       int32 pResBin = 1000
-       double pResMin = -0.5
-       double pResMax = 0.5
-
+	int32 ptBin = 500
+	double ptMin = 0.0
+	double ptMax = 500.0       
+	
+	int32 pResBin = 1000
+	double pResMin = -0.5
+	double pResMax = 0.5
     }
-
-
+    
+    
     InputTag seedsCollectionLabel = CosmicMuonSeed
 
     PSet seedsAnalysis = {
-       bool debug = true
-
-       int32 RecHitBin=22
-       double RecHitMin = 3
-       double RecHitMax = 25
-
-       int32 PhiBin = 100
-       double PhiMin = -3.2
-       double PhiMax = 3.2
-
-       int32 EtaBin = 100
-       double EtaMin = -3.0
-       double EtaMax = 3.0
-
-       int32 ThetaBin = 100
-       double ThetaMin = 0.0
-       double ThetaMax = 3.2
-
-       int32 seedPtBin = 20
-       double seedPtMin = -0.5
-       double seedPtMax = 19.5
-
-       int32 seedPxBin = 100
-       double seedPxMin = -50.0
-       double seedPxMax = 50.0
-
-       int32 seedPyBin = 100
-       double seedPyMin = -50.0
-       double seedPyMax = 50.0
-
-       int32 seedPzBin = 100
-       double seedPzMin = -50.0
-       double seedPzMax = 50.0
-
-       int32 ptErrBin = 500
-       double ptErrMin = 0
-       double ptErrMax = 1000
-
-       int32 pxErrBin = 1000
-       double pxErrMin = -1000
-       double pxErrMax = 1000
-
-       int32 pyErrBin = 1000
-       double pyErrMin = -1000
-       double pyErrMax = 1000
-
-       int32 pzErrBin = 1000
-       double pzErrMin = -1000
-       double pzErrMax = 1000
-
-       int32 pErrBin = 1000
-       double pErrMin = -1000
-       double pErrMax = 1000
-
-       int32 phiErrBin = 500
-       double phiErrMin = -5
-       double phiErrMax = 5
-
-       int32 etaErrBin = 500
-       double etaErrMin = -0.5
-       double etaErrMax = 0.5
-
+	bool debug = true
+	
+	int32 RecHitBin=22
+	double RecHitMin = 3
+	double RecHitMax = 25
+	
+	int32 PhiBin = 100
+	double PhiMin = -3.2
+	double PhiMax = 3.2
+	
+	int32 EtaBin = 100
+	double EtaMin = -3.0
+	double EtaMax = 3.0
+	
+	int32 ThetaBin = 100
+	double ThetaMin = 0.0
+	double ThetaMax = 3.2
+	
+	int32 seedPtBin = 20
+	double seedPtMin = -0.5
+	double seedPtMax = 19.5
+	
+	int32 seedPxBin = 100
+	double seedPxMin = -50.0
+	double seedPxMax = 50.0
+	
+	int32 seedPyBin = 100
+	double seedPyMin = -50.0
+	double seedPyMax = 50.0
+	
+	int32 seedPzBin = 100
+	double seedPzMin = -50.0
+	double seedPzMax = 50.0
+	
+	int32 ptErrBin = 500
+	double ptErrMin = 0
+	double ptErrMax = 1000
+	
+	int32 pxErrBin = 1000
+	double pxErrMin = -1000
+	double pxErrMax = 1000
+	
+	int32 pyErrBin = 1000
+	double pyErrMin = -1000
+	double pyErrMax = 1000
+	
+	int32 pzErrBin = 1000
+	double pzErrMin = -1000
+	double pzErrMax = 1000
+	
+	int32 pErrBin = 1000
+	double pErrMin = -1000
+	double pErrMax = 1000
+	
+	int32 phiErrBin = 500
+	double phiErrMin = -5
+	double phiErrMax = 5
+	
+	int32 etaErrBin = 500
+	double etaErrMin = -0.5
+	double etaErrMax = 0.5
+    
     }
-
-    bool OutputMEsInRootFile = true
+    
+    bool OutputMEsInRootFile = false
     string OutputFileName="MuonMonitoring.root"
 
 
-  }
+}
