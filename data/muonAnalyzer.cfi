@@ -34,6 +34,35 @@
        double hoS9SizeMax = 10.0
     }
 
+    PSet muonRecoAnalysis = {  
+
+       int32 phiBin = 100
+       double phiMin = -3.2
+       double phiMax = 3.2
+
+       int32 etaBin = 100
+       double etaMin = -3.0
+       double etaMax = 3.0
+
+       int32 thetaBin = 100
+       double thetaMin = 0.0
+       double thetaMax = 3.2
+
+       int32 pBin = 500
+       double pMin = 0.0
+       double pMax = 500.0
+
+       int32 ptBin = 500
+       double ptMin = 0.0
+       double ptMax = 500.0       
+
+       int32 pResBin = 1000
+       double pResMin = -0.5
+       double pResMax = 0.5
+
+    }
+
+
     InputTag seedsCollectionLabel = CosmicMuonSeed
 
     PSet seedsAnalysis = {
@@ -101,9 +130,8 @@
 
     }
 
-
     bool OutputMEsInRootFile = true
-    string OutputFileName="MuDepositEnergyMonitoring.root"
+    string OutputFileName="MuonMonitoring.root"
 
 
   }

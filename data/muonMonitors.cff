@@ -1,10 +1,12 @@
 #Analyzer taken from online dqm
-include "DQM/TrackerMonitorTrack/data/MonitorTrackSTACosmicMuons.cff"
+include "DQM/TrackingMonitor/data/MonitorTrackSTACosmicMuons.cfi"
 
-#dedicated analyzers from offline dqm 
+#dedicated analyzers for offline dqm 
 include "DQMOffline/Muon/data/muonAnalyzer.cff"
 
-replace MonitorTrackSTACosmicMuons.OutputMEsInRootFile = false
-replace muonAnalyzer.OutputMEsInRootFile = false
-
 sequence muonMonitors = {MonitorTrackSTACosmicMuons,muonAnalyzer}
+
+#dedicated clients for offline dqm 
+include "DQMOffline/Muon/data/muonQualityTests.cff"
+
+sequence muonMonitorsAndQualityTests = {muonMonitors,muonQualityTests}
