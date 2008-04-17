@@ -1,0 +1,11 @@
+ # the clients
+include "DQMOffline/Muon/data/trackResidualsTest.cfi"
+
+
+module muonQualityTestsXML = QualityTester{
+    untracked int32 prescaleFactor = 1
+    untracked FileInPath qtList = "DQMOffline/Muon/data/QualityTests.xml" 
+}
+
+
+sequence muonQualityTests = {muTrackResidualsTest, muonQualityTestsXML}
