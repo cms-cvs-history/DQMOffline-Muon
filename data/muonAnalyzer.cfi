@@ -5,6 +5,7 @@ module muonAnalyzer = MuonAnalyzer
     
     InputTag CosmicsCollectionLabel = muons
     
+    untracked bool DoMuonEnergyAnalysis = true
     PSet muonEnergyAnalysis = {   
 	bool debug = true
        string AlgoName="muons"
@@ -34,6 +35,7 @@ module muonAnalyzer = MuonAnalyzer
 	double hoS9SizeMax = 10.0
     }
     
+    untracked bool DoMuonRecoAnalysis = true
     PSet muonRecoAnalysis = {  
 	
 	int32 phiBin = 100
@@ -64,6 +66,7 @@ module muonAnalyzer = MuonAnalyzer
     
     InputTag seedsCollectionLabel = CosmicMuonSeed
 
+    untracked bool DoMuonSeedAnalysis = true
     PSet seedsAnalysis = {
 	bool debug = true
 	
