@@ -10,6 +10,11 @@ include "DQMOffline/Muon/data/muonAnalyzer.cff"
 
 sequence muonMonitors = {muonTrackAnalyzers, muonAnalyzer}
 
+module muonStandAloneAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
+replace muonStandAloneAnalyzer.DoMuonRecoAnalysis = false
+sequence muonStandAloneMonitors = {MonitorTrackSTACosmicMuons, muonStandAloneAnalyzer}
+
+
 #dedicated clients for offline dqm 
 include "DQMOffline/Muon/data/muonQualityTests.cff"
 
