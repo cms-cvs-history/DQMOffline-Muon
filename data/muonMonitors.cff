@@ -8,13 +8,13 @@ sequence muonTrackAnalyzers = { MonitorTrackSTACosmicMuons, MonitorTrackTKCosmic
 
 #dedicated analyzers for offline dqm 
 include "DQMOffline/Muon/data/muonAnalyzer.cff"
+include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
-sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, muonAnalyzer}
+sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, cscMonitor, muonAnalyzer}
 
 module muonStandAloneAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
 replace muonStandAloneAnalyzer.DoMuonRecoAnalysis = false
-sequence muonStandAloneMonitors = {MonitorTrackSTACosmicMuons, dtSegmentsMonitor, muonStandAloneAnalyzer}
-
+sequence muonStandAloneMonitors = {MonitorTrackSTACosmicMuons, dtSegmentsMonitor, cscMonitor, muonStandAloneAnalyzer}
 
 #dedicated clients for offline dqm 
 include "DQMOffline/Muon/data/muonQualityTests.cff"
