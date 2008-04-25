@@ -1,6 +1,6 @@
 module cscMonitor = CSCOfflineMonitor{
 
-  bool saveHistos = true
+  bool saveHistos = false
   string outputFileName = "test.root"
 
 }
