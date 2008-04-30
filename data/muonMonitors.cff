@@ -11,6 +11,7 @@ include "DQMOffline/Muon/data/muonAnalyzer.cff"
 include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
 sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, cscMonitor, muonAnalyzer}
+sequence muonMonitors_woCSC = {muonTrackAnalyzers, dtSegmentsMonitor, muonAnalyzer}
 
 module muonStandAloneAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
 replace muonStandAloneAnalyzer.DoMuonRecoAnalysis = false
