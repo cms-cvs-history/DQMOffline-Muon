@@ -8,4 +8,4 @@ module muonQualityTestsXML = QualityTester{
 }
 
 
-sequence muonQualityTests = {muTrackResidualsTest, muonQualityTestsXML}
+sequence muonQualityTests = {muonQualityTestsXML, muTrackResidualsTest}
