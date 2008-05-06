@@ -30,15 +30,15 @@
 </QTEST>
 
 
-<LINK name="*MuonRecoAnalyzer/Res_*">
+<LINK name="*Res_*">
         <TestName activate="true">ResidualsDistributionGaussianTest</TestName>
 </LINK>
 
-<LINK name="*MuonRecoAnalyzer/Res_*">
+<LINK name="*MeanTest*">
 	<TestName activate="true">ResidualsMeanInRange</TestName>
 </LINK>
 
-<LINK name="*MuonRecoAnalyzer/Res_*">
+<LINK name="*SigmaTest*">
 	<TestName activate="true">ResidualsSigmaInRange</TestName>
 </LINK>
 
