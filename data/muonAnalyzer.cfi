@@ -10,29 +10,29 @@ module muonAnalyzer = MuonAnalyzer
 	bool debug = true
        string AlgoName="muons"
 	
-	int32 emSizeBin=1000
+	int32 emSizeBin=100
 	double emSizeMin = 0.0
-	double emSizeMax = 10.0
+	double emSizeMax = 4.0
 	
-	int32 emS9SizeBin=1000
+	int32 emS9SizeBin=100
 	double emS9SizeMin = 0.0
-	double emS9SizeMax = 10.0
+	double emS9SizeMax = 4.0
 	
-	int32 hadSizeBin=1000
+	int32 hadSizeBin=100
 	double hadSizeMin = 0.0
-	double hadSizeMax = 10.0
+	double hadSizeMax = 4.0
 
-	int32 hadS9SizeBin=1000
+	int32 hadS9SizeBin=100
 	double hadS9SizeMin = 0.0
-	double hadS9SizeMax = 10.0
+	double hadS9SizeMax = 4.0
 	
-	int32 hoSizeBin=1000
+	int32 hoSizeBin=100
 	double hoSizeMin = 0.0
-	double hoSizeMax = 10.0
+	double hoSizeMax = 4.0
 	
-	int32 hoS9SizeBin=1000
+	int32 hoS9SizeBin=100
 	double hoS9SizeMin = 0.0
-	double hoS9SizeMax = 10.0
+	double hoS9SizeMax = 4.0
     }
     
     untracked bool DoMuonRecoAnalysis = true
@@ -106,21 +106,21 @@ module muonAnalyzer = MuonAnalyzer
 	double ptErrMin = 0
 	double ptErrMax = 1000
 	
-	int32 pxErrBin = 1000
-	double pxErrMin = -1000
-	double pxErrMax = 1000
+	int32 pxErrBin = 100
+	double pxErrMin = -100
+	double pxErrMax = 100
 	
-	int32 pyErrBin = 1000
-	double pyErrMin = -1000
-	double pyErrMax = 1000
+	int32 pyErrBin = 100
+	double pyErrMin = -100
+	double pyErrMax = 100
 	
-	int32 pzErrBin = 1000
-	double pzErrMin = -1000
-	double pzErrMax = 1000
+	int32 pzErrBin = 100
+	double pzErrMin = -100
+	double pzErrMax = 100
 	
-	int32 pErrBin = 1000
-	double pErrMin = -1000
-	double pErrMax = 1000
+	int32 pErrBin = 100
+	double pErrMin = -100
+	double pErrMax = 100
 	
 	int32 phiErrBin = 500
 	double phiErrMin = -5
