@@ -1,10 +1,12 @@
 #Analyzer taken from online dqm
 include "DQM/TrackingMonitor/data/MonitorTrackSTACosmicMuons.cfi"
+include "DQM/TrackingMonitor/data/MonitorTrackSTACosmicMuonsHLT.cff"
 include "DQM/TrackingMonitor/data/MonitorTrackGLBCosmicMuons.cfi"
 include "DQM/TrackingMonitor/data/MonitorTrackTKCosmicMuons.cfi"
 include "DQM/DTMonitorModule/data/dtSegmTask.cfi"
 
 sequence muonTrackAnalyzers = { MonitorTrackSTACosmicMuons, MonitorTrackTKCosmicMuons, MonitorTrackGLBCosmicMuons }
+sequence muonTrackAnalyzersHLT = { MonitorTrackSTACosmicMuonsHLTDT, MonitorTrackSTACosmicMuonsHLTCSC }
 
 #dedicated analyzers for offline dqm 
 include "DQMOffline/Muon/data/muonAnalyzer.cff"
