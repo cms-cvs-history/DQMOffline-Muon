@@ -7,7 +7,7 @@ module muonAnalyzer = MuonAnalyzer
     
     untracked bool DoMuonEnergyAnalysis = true
     PSet muonEnergyAnalysis = {   
-	bool debug = true
+	bool debug = false
        string AlgoName="muons"
 	
 	int32 emSizeBin=100
@@ -68,7 +68,7 @@ module muonAnalyzer = MuonAnalyzer
 
     untracked bool DoMuonSeedAnalysis = true
     PSet seedsAnalysis = {
-	bool debug = true
+	bool debug = false
 	
 	int32 RecHitBin=22
 	double RecHitMin = 3
