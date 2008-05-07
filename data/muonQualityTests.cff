@@ -2,10 +2,15 @@
 include "DQMOffline/Muon/data/trackResidualsTest.cfi"
 
 
-module muonQualityTestsXML = QualityTester{
+module muonSourcesQualityTests = QualityTester{
     untracked int32 prescaleFactor = 1
-    untracked FileInPath qtList = "DQMOffline/Muon/data/QualityTests.xml" 
+    untracked FileInPath qtList = "DQMOffline/Muon/data/QualityTests1.xml" 
+}
+
+module muonClientsQualityTests = QualityTester{
+    untracked int32 prescaleFactor = 1
+    untracked FileInPath qtList = "DQMOffline/Muon/data/QualityTests2.xml" 
 }
 
 
-sequence muonQualityTests = {muonQualityTestsXML, muTrackResidualsTest}
+sequence muonQualityTests = {muonSourcesQualityTests, muTrackResidualsTest, muonClientsQualityTests}
