@@ -131,9 +131,22 @@ module muonAnalyzer = MuonAnalyzer
 	double etaErrMax = 0.5
     
     }
-    
-    bool OutputMEsInRootFile = false
-    string OutputFileName="MuonMonitoring.root"
 
+   
+   InputTag trackCollectionLabel = globalCosmicMuons
+
+   untracked bool DoTrackSegmentsAnalysis = true
+   PSet trackSegmentsAnalysis = {  	
+
+	PSet SegmentsTrackAssociatorParameters = {
+	    untracked InputTag segmentsDt = dt4DSegments
+	    untracked InputTag segmentsCSC = cscSegments
+	    untracked InputTag SelectedSegments = SelectedSegments    
+	}   
+   }
+            
+
+   bool OutputMEsInRootFile = false
+   string OutputFileName="MuonMonitoring.root"
 
 }
