@@ -135,7 +135,7 @@ module muonAnalyzer = MuonAnalyzer
    
    InputTag trackCollectionLabel = globalCosmicMuons
 
-   untracked bool DoTrackSegmentsAnalysis = true
+   untracked bool DoTrackSegmentsAnalysis = false
    PSet trackSegmentsAnalysis = {  	
 
 	PSet SegmentsTrackAssociatorParameters = {
