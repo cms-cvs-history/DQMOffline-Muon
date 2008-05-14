@@ -58,7 +58,7 @@ module muonAnalyzer = MuonAnalyzer
 	double ptMin = 0.0
 	double ptMax = 500.0       
 	
-	int32 pResBin = 1000
+	int32 pResBin = 500
 	double pResMin = -0.5
 	double pResMax = 0.5
     }
