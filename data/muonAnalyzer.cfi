@@ -133,10 +133,18 @@ module muonAnalyzer = MuonAnalyzer
     }
 
    
-   InputTag trackCollectionLabel = globalCosmicMuons
+   InputTag trackCollectionLabel = globalMuons
 
-   untracked bool DoTrackSegmentsAnalysis = false
+   untracked bool DoTrackSegmentsAnalysis = true
    PSet trackSegmentsAnalysis = {  	
+
+        int32 phiBin = 100
+	double phiMin = -3.2
+	double phiMax = 3.2
+	
+	int32 etaBin = 100
+	double etaMin = -3.0
+	double etaMax = 3.0
 
 	PSet SegmentsTrackAssociatorParameters = {
 	    untracked InputTag segmentsDt = dt4DSegments
