@@ -146,6 +146,10 @@ module muonAnalyzer = MuonAnalyzer
 	double etaMin = -3.0
 	double etaMax = 3.0
 
+        int32 ptBin = 200
+	double ptMin = 0.0
+        double ptMax = 200.0
+
 	PSet SegmentsTrackAssociatorParameters = {
 	    untracked InputTag segmentsDt = dt4DSegments
 	    untracked InputTag segmentsCSC = cscSegments
