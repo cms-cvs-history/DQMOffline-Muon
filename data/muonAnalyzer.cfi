@@ -3,7 +3,7 @@ module muonAnalyzer = MuonAnalyzer
 {
     using MuonServiceProxy
     
-    InputTag CosmicsCollectionLabel = muons
+    InputTag MuonCollection = muons
     
     untracked bool DoMuonEnergyAnalysis = true
     PSet muonEnergyAnalysis = {   
@@ -63,10 +63,8 @@ module muonAnalyzer = MuonAnalyzer
 	double pResMax = 0.5
     }
     
-    
-    InputTag seedsCollectionLabel = CosmicMuonSeed
-
     untracked bool DoMuonSeedAnalysis = true
+    InputTag SeedCollection = MuonSeed
     PSet seedsAnalysis = {
 	bool debug = false
 	
@@ -132,11 +130,9 @@ module muonAnalyzer = MuonAnalyzer
     
     }
 
-   
-   InputTag trackCollectionLabel = globalMuons
-
-   untracked bool DoTrackSegmentsAnalysis = true
-   PSet trackSegmentsAnalysis = {  	
+    untracked bool DoTrackSegmentsAnalysis = true
+    InputTag TrackCollection = globalMuons
+    PSet trackSegmentsAnalysis = {  	
 
         int32 phiBin = 100
 	double phiMin = -3.2
