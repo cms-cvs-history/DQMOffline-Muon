@@ -16,7 +16,7 @@ include "RecoMuon/TrackingTools/data/MuonServiceProxy.cff"
 include "DQMOffline/Muon/data/muonCosmicAnalyzer.cfi"
 include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
-sequence muonCosmicMonitors = {muonTrackCosmicAnalyzers, dtSegmentsMonitor, cscMonitor, muonCosmicMonitors}
+sequence muonCosmicMonitors = {muonTrackCosmicAnalyzers, dtSegmentsMonitor, cscMonitor, muonCosmicAnalyzer}
 sequence muonCosmicMonitors_woCSC = {muonTrackAnalyzers, dtSegmentsMonitor, muonCosmicMonitors}
 
 module muonStandAloneCosmicAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
