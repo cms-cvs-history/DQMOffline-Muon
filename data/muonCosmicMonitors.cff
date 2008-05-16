@@ -11,8 +11,9 @@ sequence muonTrackAnalyzers = {standAloneCosmicMuonsMonitors,
 
 sequence muonTrackAnalyzersHLT = { MonitorTrackSTACosmicMuonsHLTDT, MonitorTrackSTACosmicMuonsHLTCSC }
 
-#dedicated analyzers for offline dqm 
-include "DQMOffline/Muon/data/muonAnalyzer.cff"
+#dedicated analyzers for offline dqm
+include "RecoMuon/TrackingTools/data/MuonServiceProxy.cff" 
+include "DQMOffline/Muon/data/muonCosmicAnalyzer.cfi"
 include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
 sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, cscMonitor, muonAnalyzer}
