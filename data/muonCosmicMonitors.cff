@@ -5,25 +5,25 @@ include "DQM/TrackingMonitor/data/MonitorTrackGLBCosmicMuons.cfi"
 include "DQM/TrackingMonitor/data/MonitorTrackTKCosmicMuons.cfi"
 include "DQM/DTMonitorModule/data/dtSegmTask.cfi"
 
-sequence muonTrackAnalyzers = {standAloneCosmicMuonsMonitors, 
+sequence muonTrackCosmicAnalyzers = {standAloneCosmicMuonsMonitors, 
     MonitorTrackTKCosmicMuons, 
     MonitorTrackGLBCosmicMuons}
 
-sequence muonTrackAnalyzersHLT = { MonitorTrackSTACosmicMuonsHLTDT, MonitorTrackSTACosmicMuonsHLTCSC }
+sequence muonTrackCosmicAnalyzersHLT = { MonitorTrackSTACosmicMuonsHLTDT, MonitorTrackSTACosmicMuonsHLTCSC }
 
 #dedicated analyzers for offline dqm
 include "RecoMuon/TrackingTools/data/MuonServiceProxy.cff" 
 include "DQMOffline/Muon/data/muonCosmicAnalyzer.cfi"
 include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
-sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, cscMonitor, muonAnalyzer}
-sequence muonMonitors_woCSC = {muonTrackAnalyzers, dtSegmentsMonitor, muonAnalyzer}
+sequence muonCosmicMonitors = {muonTrackCosmicAnalyzers, dtSegmentsMonitor, cscMonitor, muonCosmicMonitors}
+sequence muonCosmicMonitors_woCSC = {muonTrackAnalyzers, dtSegmentsMonitor, muonCosmicMonitors}
 
-module muonStandAloneAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
-replace muonStandAloneAnalyzer.DoMuonRecoAnalysis = false
-sequence muonStandAloneMonitors = {MonitorTrackSTACosmicMuons, dtSegmentsMonitor, cscMonitor, muonStandAloneAnalyzer}
+module muonStandAloneCosmicAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
+replace muonStandAloneCosmicAnalyzer.DoMuonRecoAnalysis = false
+sequence muonStandAloneCosmicMonitors = {MonitorTrackSTACosmicMuons, dtSegmentsMonitor, cscMonitor, muonStandAloneCosmicAnalyzer}
 
 #dedicated clients for offline dqm 
 include "DQMOffline/Muon/data/muonQualityTests.cff"
 
-sequence muonMonitorsAndQualityTests = {muonMonitors,muonQualityTests}
+sequence muonCosmicMonitorsAndQualityTests = {muonCosmicMonitors,muonQualityTests}
