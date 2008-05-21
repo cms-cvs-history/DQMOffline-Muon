@@ -18,13 +18,13 @@ module muonAnalyzer = MuonAnalyzer
 	double emS9SizeMin = 0.0
 	double emS9SizeMax = 4.0
 	
-	int32 hadSizeBin=100
+	int32 hadSizeBin=200
 	double hadSizeMin = 0.0
-	double hadSizeMax = 4.0
+	double hadSizeMax = 10.0
 
-	int32 hadS9SizeBin=100
+	int32 hadS9SizeBin=200
 	double hadS9SizeMin = 0.0
-	double hadS9SizeMax = 4.0
+	double hadS9SizeMax = 10.0
 	
 	int32 hoSizeBin=100
 	double hoSizeMin = 0.0
@@ -58,9 +58,9 @@ module muonAnalyzer = MuonAnalyzer
 	double ptMin = 0.0
 	double ptMax = 500.0       
 	
-	int32 pResBin = 500
-	double pResMin = -0.5
-	double pResMax = 0.5
+	int32 pResBin = 100
+	double pResMin = -0.25
+	double pResMax = 0.25
     }
     
     untracked bool DoMuonSeedAnalysis = true
@@ -68,8 +68,8 @@ module muonAnalyzer = MuonAnalyzer
     PSet seedsAnalysis = {
 	bool debug = false
 	
-	int32 RecHitBin=22
-	double RecHitMin = 3
+	int32 RecHitBin=25
+	double RecHitMin = 0
 	double RecHitMax = 25
 	
 	int32 PhiBin = 100
@@ -84,10 +84,11 @@ module muonAnalyzer = MuonAnalyzer
 	double ThetaMin = 0.0
 	double ThetaMax = 3.2
 	
-	int32 seedPtBin = 20
-	double seedPtMin = -0.5
-	double seedPtMax = 19.5
+	int32 seedPtBin = 1000
+	double seedPtMin = 0
+	double seedPtMax = 200
 	
+	#
 	int32 seedPxBin = 100
 	double seedPxMin = -50.0
 	double seedPxMax = 50.0
@@ -99,11 +100,19 @@ module muonAnalyzer = MuonAnalyzer
 	int32 seedPzBin = 100
 	double seedPzMin = -50.0
 	double seedPzMax = 50.0
-	
-	int32 ptErrBin = 500
+	#
+
+	##
+	int32 ptErrBin = 200
 	double ptErrMin = 0
-	double ptErrMax = 1000
+	double ptErrMax = 200
 	
+	int32 pErrBin = 100
+	double pErrMin = 0
+	double pErrMax = 200
+	##
+
+	##
 	int32 pxErrBin = 100
 	double pxErrMin = -100
 	double pxErrMax = 100
@@ -115,17 +124,15 @@ module muonAnalyzer = MuonAnalyzer
 	int32 pzErrBin = 100
 	double pzErrMin = -100
 	double pzErrMax = 100
+	##
+
 	
-	int32 pErrBin = 100
-	double pErrMin = -100
-	double pErrMax = 100
+	int32 phiErrBin = 160
+	double phiErrMin = 0.
+	double phiErrMax = 3.2
 	
-	int32 phiErrBin = 500
-	double phiErrMin = -5
-	double phiErrMax = 5
-	
-	int32 etaErrBin = 500
-	double etaErrMin = -0.5
+	int32 etaErrBin = 200
+	double etaErrMin = 0.
 	double etaErrMax = 0.5
     
     }
