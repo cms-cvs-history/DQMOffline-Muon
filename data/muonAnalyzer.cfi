@@ -111,7 +111,8 @@ module muonAnalyzer = MuonAnalyzer
     }
 
     untracked bool DoTrackSegmentsAnalysis = true
-    InputTag TrackCollection = globalMuons
+    InputTag GlobalMuTrackCollection = globalMuons
+    InputTag STAMuTrackCollection = standAloneMuons
     PSet trackSegmentsAnalysis = {  	
 
         int32 phiBin = 100
