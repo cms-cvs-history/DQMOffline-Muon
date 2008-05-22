@@ -88,44 +88,17 @@ module muonAnalyzer = MuonAnalyzer
 	double seedPtMin = 0
 	double seedPtMax = 200
 	
-	#
-	int32 seedPxBin = 100
-	double seedPxMin = -50.0
-	double seedPxMax = 50.0
-	
-	int32 seedPyBin = 100
-	double seedPyMin = -50.0
-	double seedPyMax = 50.0
-	
-	int32 seedPzBin = 100
-	double seedPzMin = -50.0
-	double seedPzMax = 50.0
-	#
+	int32 seedPxyzBin = 100
+	double seedPxyzMin = -50.0
+	double seedPxyzMax = 50.0
 
-	##
-	int32 ptErrBin = 200
-	double ptErrMin = 0
-	double ptErrMax = 200
-	
-	int32 pErrBin = 100
+	int32 pErrBin = 200
 	double pErrMin = 0
 	double pErrMax = 200
-	##
 
-	##
-	int32 pxErrBin = 100
-	double pxErrMin = -100
-	double pxErrMax = 100
-	
-	int32 pyErrBin = 100
-	double pyErrMin = -100
-	double pyErrMax = 100
-	
-	int32 pzErrBin = 100
-	double pzErrMin = -100
-	double pzErrMax = 100
-	##
-
+	int32 pxyzErrBin = 100
+	double pxyzErrMin = -100
+	double pxyzErrMax = 100
 	
 	int32 phiErrBin = 160
 	double phiErrMin = 0.
