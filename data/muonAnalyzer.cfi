@@ -58,9 +58,9 @@ module muonAnalyzer = MuonAnalyzer
 	double ptMin = 0.0
 	double ptMax = 500.0       
 	
-	int32 pResBin = 100
-	double pResMin = -0.25
-	double pResMax = 0.25
+	int32 pResBin = 50
+	double pResMin = -0.01
+	double pResMax = 0.01
     }
     
     untracked bool DoMuonSeedAnalysis = true
