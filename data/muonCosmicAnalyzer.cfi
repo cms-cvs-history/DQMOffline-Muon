@@ -3,6 +3,7 @@ module muonCosmicAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer
 
 replace muonCosmicAnalyzer.MuonCollection = muons
 replace muonCosmicAnalyzer.SeedCollection = CosmicMuonSeed
-replace muonCosmicAnalyzer.TrackCollection = cosmicMuons
+replace muonCosmicAnalyzer.GlobalMuTrackCollection = globalCosmicMuons
+replace muonCosmicAnalyzer.STAMuTrackCollection = cosmicMuons
 
 
