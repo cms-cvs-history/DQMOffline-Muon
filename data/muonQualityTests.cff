@@ -13,4 +13,4 @@ module muonClientsQualityTests = QualityTester{
 }
 
 
-sequence muonQualityTests = {muonSourcesQualityTests, muTrackResidualsTest, muonClientsQualityTests}
+sequence muonQualityTests = {muonSourcesQualityTests, muTrackResidualsTest} # , muonClientsQualityTests}
