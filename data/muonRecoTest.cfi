@@ -1,0 +1,18 @@
+module muRecoTest = MuonRecoTest
+{
+ 
+   # number of luminosity block to analyse
+   untracked int32 diagnosticPrescale = 1
+
+   # histo binning
+   int32 etaBin = 100
+   double etaMin = -3.0
+   double etaMax = 3.0
+
+   int32 phiBin = 100
+   double phiMin = -3.2
+   double phiMax = 3.2
+
+   untracked string efficiencyTestName = "EfficiencyInRange"
+
+}
