@@ -64,7 +64,7 @@ module muonAnalyzer = MuonAnalyzer
 
 	int32 rhBin = 25
 	double rhMin = 0
-	double rhMax = 1
+	double rhMax = 1.001
     }
     
     untracked bool DoMuonSeedAnalysis = true
