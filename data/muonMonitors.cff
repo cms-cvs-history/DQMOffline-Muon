@@ -3,14 +3,14 @@ include "DQM/TrackingMonitor/data/MonitorTrackSTAMuons.cfi"
 include "DQM/TrackingMonitor/data/MonitorTrackGLBMuons.cfi"
 include "DQM/DTMonitorModule/data/dtSegmTask.cfi"
 
-sequence muonTrackAnalyzers = {standAloneMuonsMonitors, 
+sequence muonTrackAnalyzers = {MonitorTrackSTAMuons, 
                                MonitorTrackGLBMuons}
 
 #dedicated analyzers for offline dqm 
 include "DQMOffline/Muon/data/muonAnalyzer.cff"
 include "DQMOffline/Muon/data/CSCMonitor.cfi"
 
-sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, cscMonitor, muonAnalyzer}
+sequence muonMonitors = {muonTrackAnalyzers, dtSegmentsMonitor, muonAnalyzer}
 
 #dedicated clients for offline dqm 
 include "DQMOffline/Muon/data/muonQualityTests.cff"
