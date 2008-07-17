@@ -1,6 +1,6 @@
  # the clients
 include "DQMOffline/Muon/data/trackResidualsTest.cfi"
-
+include "DQMOffline/Muon/data/muonRecoTest.cfi"
 
 module muonSourcesQualityTests = QualityTester{
     untracked int32 prescaleFactor = 1
