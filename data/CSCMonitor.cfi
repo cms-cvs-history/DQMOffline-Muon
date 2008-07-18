@@ -5,5 +5,7 @@ module cscMonitor = CSCOfflineMonitor{
 
   InputTag stripDigiTag  = muonCSCDigis:MuonCSCStripDigi
   InputTag wireDigiTag   = muonCSCDigis:MuonCSCWireDigi 
- 
+  InputTag cscRecHitTag  = csc2DRecHits
+  InputTag cscSegTag     = cscSegments 
+
 }
