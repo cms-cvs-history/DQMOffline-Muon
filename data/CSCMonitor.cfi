@@ -3,4 +3,7 @@ module cscMonitor = CSCOfflineMonitor{
   bool saveHistos = false
   string outputFileName = "test.root"
 
+  InputTag stripDigiTag  = muonCSCDigis:MuonCSCStripDigi
+  InputTag wireDigiTag   = muonCSCDigis:MuonCSCWireDigi 
+ 
 }
