@@ -22,10 +22,4 @@ module rpcEfficiency = RPCEfficiency {
 		untracked string EffRootFileName  = "MuonSegEff.root"
                }
 
-include "Geometry/MuonCommonData/data/muonIdealGeometryXML.cfi"
-include "Geometry/RPCGeometry/data/rpcGeometry.cfi"
-include "Geometry/CSCGeometry/data/cscGeometry.cfi"
-include "Geometry/DTGeometry/data/dtGeometry.cfi"
-include "Geometry/MuonNumbering/data/muonNumberingInitialization.cfi"
-
 sequence rpcSource= {rpcEfficiency}

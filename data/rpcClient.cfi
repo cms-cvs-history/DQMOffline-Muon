@@ -3,10 +3,4 @@ module rpcGlobalEfficiency = RPCEfficiencySecond {
 	untracked string NameFile  = "/tmp/carrillo/RPCEfficiency.root"
 }
 
-include "Geometry/MuonCommonData/data/muonIdealGeometryXML.cfi"
-include "Geometry/RPCGeometry/data/rpcGeometry.cfi"
-include "Geometry/MuonNumbering/data/muonNumberingInitialization.cfi"
-include "DQMServices/Components/data/EDMtoMEConverter.cfi"
-include "DQMServices/Core/data/DQM.cfg"	
-
 sequence rpcClient = {rpcGlobalEfficiency}
