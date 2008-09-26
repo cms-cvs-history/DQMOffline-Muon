@@ -16,14 +16,14 @@ process.load("DQMServices.Core.DQM_cfg")
 
 process.load("Configuration.StandardSequences.FrontierConditions_GlobalTag_cff")
 process.GlobalTag.connect = "frontier://PromptProd/CMS_COND_21X_GLOBALTAG"
-process.GlobalTag.globaltag = "CRUZET4_V2P::All"
+process.GlobalTag.globaltag = "CRUZET4_V5P::All"
 process.prefer("GlobalTag")
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(100)
+    input = cms.untracked.int32(-1)
 )
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:/tmp/carrillo/80C0BD1C-286F-DD11-8434-000423DD2F34.root')
+   fileNames = cms.untracked.vstring('-input-')
 )
 
 process.MessageLogger = cms.Service("MessageLogger",
@@ -40,26 +40,24 @@ process.museg = cms.EDFilter("RPCEfficiency",
     
     DuplicationCorrection = cms.untracked.int32(1),
 	
-    MinimalResidual = cms.untracked.double(4.5),
-    MinimalResidualRB4 = cms.untracked.double(10.0),
+    rangestrips = cms.untracked.double(1.),
+    rangestripsRB4 = cms.untracked.double(4.),
     MinCosAng = cms.untracked.double(0.99),
     MaxD = cms.untracked.double(80.0),
     MaxDrb4 = cms.untracked.double(150.0),
-    MaxResStripToCountInAverage = cms.untracked.double(5.0),
-    MaxResStripToCountInAverageRB4 = cms.untracked.double(7.0),
 
     muonRPCDigis = cms.untracked.string('muonRPCDigis'),
     cscSegments = cms.untracked.string('cscSegments'),
     dt4DSegments = cms.untracked.string('dt4DSegments'),
 
     EffSaveRootFile = cms.untracked.bool(False),
-    EffRootFileName = cms.untracked.string('MuonSegEff.root'),
+    EffRootFileName = cms.untracked.string('-output-'),
     EffSaveRootFileEventsInterval = cms.untracked.int32(100)
 )
 
 process.FEVT = cms.OutputModule("PoolOutputModule",
     outputCommands = cms.untracked.vstring('keep *_MEtoEDMConverter_*_*'),
-    fileName = cms.untracked.string('/tmp/carrillo/prova.root')
+    fileName = cms.untracked.string('/tmp/carrillo/output.root')
 )
 
 process.p = cms.Path(process.museg*process.MEtoEDMConverter)

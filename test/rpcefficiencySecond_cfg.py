@@ -19,12 +19,14 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:/tmp/carrillo/prova.root')
+    fileNames = cms.untracked.vstring('file:/afs/cern.ch/user/c/carrillo/scratch0/FromSource.root')
+#   fileNames = cms.untracked.vstring('file:/tmp/carrillo/FromSource.root')
 )
 
 process.MessageLogger = cms.Service("MessageLogger")
 
 process.second = cms.EDFilter("RPCEfficiencySecond",
+    debug = cms.untracked.bool(False),
     SaveFile = cms.untracked.bool(True),
     NameFile = cms.untracked.string('/tmp/carrillo/RPCEfficiency.root')
 )
