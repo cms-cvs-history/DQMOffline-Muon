@@ -19,8 +19,8 @@ process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
 )
 process.source = cms.Source("PoolSource",
-    fileNames = cms.untracked.vstring('file:/afs/cern.ch/user/c/carrillo/scratch0/FromSource.root')
-#   fileNames = cms.untracked.vstring('file:/tmp/carrillo/FromSource.root')
+#    fileNames = cms.untracked.vstring('file:/afs/cern.ch/user/c/carrillo/scratch0/FromSource.root')
+     fileNames = cms.untracked.vstring('file:/tmp/carrillo/output.root')
 )
 
 process.MessageLogger = cms.Service("MessageLogger")

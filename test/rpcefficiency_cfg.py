@@ -20,10 +20,10 @@ process.GlobalTag.globaltag = "CRUZET4_V5P::All"
 process.prefer("GlobalTag")
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(-1)
+    input = cms.untracked.int32(1000)
 )
 process.source = cms.Source("PoolSource",
-   fileNames = cms.untracked.vstring('-input-')
+   fileNames = cms.untracked.vstring('/store/data/BeamCommissioning08/BeamHalo/RECO/v1/000/063/440/0058A079-D786-DD11-99CE-000423D952C0.root')
 )
 
 process.MessageLogger = cms.Service("MessageLogger",
@@ -36,7 +36,8 @@ process.museg = cms.EDFilter("RPCEfficiency",
     incldtMB4 = cms.untracked.bool(True),
     inclcsc = cms.untracked.bool(True),
 
-    debug = cms.untracked.bool(True),
+    debug = cms.untracked.bool(False),
+    inves = cms.untracked.bool(False),
     
     DuplicationCorrection = cms.untracked.int32(1),
 	
