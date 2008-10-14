@@ -37,7 +37,7 @@ process.museg = cms.EDFilter("RPCEfficiency",
     inclcsc = cms.untracked.bool(True),
 
     debug = cms.untracked.bool(False),
-    inves = cms.untracked.bool(False),
+    inves = cms.untracked.bool(True),
     
     DuplicationCorrection = cms.untracked.int32(1),
 	
@@ -51,8 +51,8 @@ process.museg = cms.EDFilter("RPCEfficiency",
     cscSegments = cms.untracked.string('cscSegments'),
     dt4DSegments = cms.untracked.string('dt4DSegments'),
 
-    EffSaveRootFile = cms.untracked.bool(False),
-    EffRootFileName = cms.untracked.string('-output-'),
+    EffSaveRootFile = cms.untracked.bool(True),
+    EffRootFileName = cms.untracked.string('/tmp/carrillo/RPCEfficiencyFIRST.root'),
     EffSaveRootFileEventsInterval = cms.untracked.int32(100)
 )
 
