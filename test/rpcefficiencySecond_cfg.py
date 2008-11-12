@@ -27,6 +27,8 @@ process.MessageLogger = cms.Service("MessageLogger")
 
 process.second = cms.EDFilter("RPCEfficiencySecond",
     debug = cms.untracked.bool(False),
+    barrel = cms.untracked.bool(True),
+    endcap = cms.untracked.bool(True),
     SaveFile = cms.untracked.bool(True),
     NameFile = cms.untracked.string('/tmp/carrillo/RPCEfficiency.root')
 )
