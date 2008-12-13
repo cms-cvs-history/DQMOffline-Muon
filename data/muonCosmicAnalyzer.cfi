@@ -1,9 +1,0 @@
-# MuonAnalyzer
-module muonCosmicAnalyzer = muonAnalyzer from "DQMOffline/Muon/data/muonAnalyzer.cfi"
-
-replace muonCosmicAnalyzer.MuonCollection = muons
-replace muonCosmicAnalyzer.SeedCollection = CosmicMuonSeed
-replace muonCosmicAnalyzer.GlobalMuTrackCollection = globalCosmicMuons
-replace muonCosmicAnalyzer.STAMuTrackCollection = cosmicMuons
-
-
