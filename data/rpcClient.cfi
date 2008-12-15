@@ -1,6 +1,0 @@
-module rpcGlobalEfficiency = RPCEfficiencySecond { 
-	untracked bool   SaveFile  = false
-	untracked string NameFile  = "/tmp/carrillo/RPCEfficiency.root"
-}
-
-sequence rpcClient = {rpcGlobalEfficiency}
