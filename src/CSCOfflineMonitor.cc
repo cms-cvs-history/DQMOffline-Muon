@@ -592,12 +592,19 @@ CSCOfflineMonitor::~CSCOfflineMonitor(){
 
 void CSCOfflineMonitor::endJob(void) {
 
-  histoEfficiency(hRHSTE,hRHEff);
-  histoEfficiency(hSSTE,hSEff);
-  hSEff2->getTH2F()->Divide(hSSTE2,hEffDenominator,1.,1.,"B");
-  hRHEff2->getTH2F()->Divide(hRHSTE2,hEffDenominator,1.,1.,"B");
-  hStripEff2->getTH2F()->Divide(hStripSTE2,hEffDenominator,1.,1.,"B");
-  hWireEff2->getTH2F()->Divide(hWireSTE2,hEffDenominator,1.,1.,"B");
+  hRHEff = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hRHEff");
+  hSEff = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hSEff");
+  hSEff2 = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hSEff2");
+  hRHEff2 = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hRHEff2");
+  hStripEff2 = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hStripEff2");
+  hWireEff2 = dbe->get("CSC/CSCOfflineMonitor/Efficiency/hWireEff2");
+
+  if (hRHEff) histoEfficiency(hRHSTE,hRHEff);
+  if (hSEff) histoEfficiency(hSSTE,hSEff);
+  if (hSEff2) hSEff2->getTH2F()->Divide(hSSTE2,hEffDenominator,1.,1.,"B");
+  if (hRHEff2) hRHEff2->getTH2F()->Divide(hRHSTE2,hEffDenominator,1.,1.,"B");
+  if (hStripEff2) hStripEff2->getTH2F()->Divide(hStripSTE2,hEffDenominator,1.,1.,"B");
+  if (hWireEff2) hWireEff2->getTH2F()->Divide(hWireSTE2,hEffDenominator,1.,1.,"B");
 
   bool saveHistos = param.getParameter<bool>("saveHistos");
   string outputFileName = param.getParameter<string>("outputFileName");
@@ -1019,8 +1026,8 @@ void CSCOfflineMonitor::doResolution(edm::Handle<CSCSegmentCollection> cscSegmen
     std::vector<CSCRecHit2D> theseRecHits = (*dSiter).specificRecHits();
     int nRH = (*dSiter).nRecHits();
     int jRH = 0;
-    HepMatrix sp(6,1);
-    HepMatrix se(6,1);
+    CLHEP::HepMatrix sp(6,1);
+    CLHEP::HepMatrix se(6,1);
     for ( vector<CSCRecHit2D>::const_iterator iRH = theseRecHits.begin(); iRH != theseRecHits.end(); iRH++) {
       jRH++;
       CSCDetId idRH = (CSCDetId)(*iRH).cscDetId();
@@ -1071,7 +1078,7 @@ void CSCOfflineMonitor::doResolution(edm::Handle<CSCSegmentCollection> cscSegmen
 // and removes hit in layer 3.  It then returns the expected position value in layer 3
 // based on the fit.
 //-------------------------------------------------------------------------------------
-float CSCOfflineMonitor::fitX(HepMatrix points, HepMatrix errors){
+float CSCOfflineMonitor::fitX(CLHEP::HepMatrix points, CLHEP::HepMatrix errors){
 
   float S   = 0;
   float Sx  = 0;
