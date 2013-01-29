@@ -105,7 +105,8 @@ void EfficiencyPlotter::endRun(Run const& run, EventSetup const& eSetup) {
 
     TH1F *h_eff_pt = h_eff_pt_TightMu->getTH1F();
     
-    h_eff_pt->Sumw2(); 
+    if (h_eff_pt->GetSumw2N() == 0) h_eff_pt->Sumw2();
+ 
     
     h_eff_pt->Divide(h_numerator_pt, h_denominator_pt, 1., 1., "B");
 
@@ -124,8 +125,8 @@ void EfficiencyPlotter::endRun(Run const& run, EventSetup const& eSetup) {
 
     TH1F *h_eff_barrel_pt = h_eff_pt_barrel_TightMu->getTH1F();
     
-    h_eff_barrel_pt->Sumw2(); 
-    
+    if (h_eff_barrel_pt->GetSumw2N() == 0) h_eff_barrel_pt->Sumw2();
+
     h_eff_barrel_pt->Divide(h_numerator_barrel_pt, h_denominator_barrel_pt, 1., 1., "B");
 
   }
@@ -142,9 +143,9 @@ void EfficiencyPlotter::endRun(Run const& run, EventSetup const& eSetup) {
     TH1F *h_denominator_endcap_pt = Denominator_endcap_pt->getTH1F();
 
     TH1F *h_eff_endcap_pt = h_eff_pt_endcap_TightMu->getTH1F();
-    
-    h_eff_endcap_pt->Sumw2(); 
-    
+      
+    if (h_eff_endcap_pt->GetSumw2N() == 0) h_eff_endcap_pt->Sumw2();
+
     h_eff_endcap_pt->Divide(h_numerator_endcap_pt, h_denominator_endcap_pt, 1., 1., "B");
 
   }
@@ -162,8 +163,8 @@ void EfficiencyPlotter::endRun(Run const& run, EventSetup const& eSetup) {
 
     TH1F *h_eff_eta = h_eff_eta_TightMu->getTH1F();
     
-    h_eff_eta->Sumw2(); 
-    
+    if (h_eff_eta->GetSumw2N() == 0) h_eff_eta->Sumw2();
+
     h_eff_eta->Divide(h_numerator_eta, h_denominator_eta, 1., 1., "B");
 
   }
@@ -180,9 +181,9 @@ void EfficiencyPlotter::endRun(Run const& run, EventSetup const& eSetup) {
     TH1F *h_denominator_hp_eta = Denominator_hp_eta->getTH1F();
 
     TH1F *h_eff_hp_eta = h_eff_hp_eta_TightMu->getTH1F();
-    
-    h_eff_hp_eta->Sumw2(); 
-    
+       
+    if (h_eff_hp_eta->GetSumw2N() == 0) h_eff_hp_eta->Sumw2();
+
     h_eff_hp_eta->Divide(h_numerator_hp_eta, h_denominator_hp_eta, 1., 1., "B");
 
   }
@@ -200,9 +201,9 @@ string numpath_phi = "Muons/EfficiencyAnalyzer/passProbes_TightMu_phi";
     TH1F *h_denominator_phi = Denominator_phi->getTH1F();
 
     TH1F *h_eff_phi = h_eff_phi_TightMu->getTH1F();
-    
-    h_eff_phi->Sumw2(); 
-    
+       
+    if (h_eff_phi->GetSumw2N() == 0) h_eff_phi->Sumw2();
+
     h_eff_phi->Divide(h_numerator_phi, h_denominator_phi, 1., 1., "B");
 
   }
